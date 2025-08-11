@@ -44,3 +44,6 @@ build/
 clients.sqbpro
 clients.db
 clients.db-journal
+
+### MAVEN ###
+.mvn
