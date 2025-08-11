@@ -2,7 +2,7 @@
 
 package com.lemavos.ChatApp;
 
-import com.lemavos.ChatApp.gui.Login;
+import com.lemavos.ChatApp.Auth.gui.Login;
 
 public class Main {
 

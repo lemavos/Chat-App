@@ -1,7 +1,8 @@
-package com.lemavos.ChatApp.gui;
+package com.lemavos.ChatApp.Auth.gui;
 
+import com.lemavos.ChatApp.Auth.db.ClientDB;
 import com.lemavos.ChatApp.constants.CommonConstants;
-import com.lemavos.ChatApp.db.ClientDB;
+
 import javax.swing.*;
 
 public class Login {

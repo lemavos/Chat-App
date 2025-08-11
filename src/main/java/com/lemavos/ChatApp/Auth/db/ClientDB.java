@@ -1,7 +1,8 @@
-package com.lemavos.ChatApp.db;
+package com.lemavos.ChatApp.Auth.db;
 
-import com.lemavos.ChatApp.models.Client;
 import java.sql.*;
+
+import com.lemavos.ChatApp.Auth.models.Client;
 
 public class ClientDB {
 

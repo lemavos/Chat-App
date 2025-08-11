@@ -1,4 +1,4 @@
-package com.lemavos.ChatApp.services;
+package com.lemavos.ChatApp.Auth.services;
 
 import javax.swing.*;
 

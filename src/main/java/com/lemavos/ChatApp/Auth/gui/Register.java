@@ -1,11 +1,12 @@
-package com.lemavos.ChatApp.gui;
+package com.lemavos.ChatApp.Auth.gui;
 
+import com.lemavos.ChatApp.Auth.db.ClientDB;
+import com.lemavos.ChatApp.Auth.models.Client;
+import com.lemavos.ChatApp.Auth.services.EmailSender;
+import com.lemavos.ChatApp.Auth.services.Utils;
+import com.lemavos.ChatApp.Auth.services.ValCodeGen;
 import com.lemavos.ChatApp.constants.CommonConstants;
-import com.lemavos.ChatApp.db.ClientDB;
-import com.lemavos.ChatApp.models.Client;
-import com.lemavos.ChatApp.services.EmailSender;
-import com.lemavos.ChatApp.services.Utils;
-import com.lemavos.ChatApp.services.ValCodeGen;
+
 import javax.swing.*;
 public class Register {
     public static void register(){
