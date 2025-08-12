@@ -1,6 +1,6 @@
-package com.lemavos.ChatApp.Auth.models;
+package com.lemavos.chatapp.auth.models;
 
-import com.lemavos.ChatApp.Auth.services.IdGen;
+import com.lemavos.chatapp.auth.services.IdGen;
 
 public class Client {
 

@@ -1,4 +1,4 @@
-package com.lemavos.ChatApp.Auth.services;
+package com.lemavos.chatapp.auth.services;
 
 import java.util.Scanner;
 

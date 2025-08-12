@@ -1,13 +1,13 @@
-package com.lemavos.ChatApp.Auth.gui;
-
-import com.lemavos.ChatApp.Auth.db.ClientDB;
-import com.lemavos.ChatApp.Auth.models.Client;
-import com.lemavos.ChatApp.Auth.services.EmailSender;
-import com.lemavos.ChatApp.Auth.services.Utils;
-import com.lemavos.ChatApp.Auth.services.ValCodeGen;
-import com.lemavos.ChatApp.constants.CommonConstants;
+package com.lemavos.chatapp.auth.gui;
 
 import javax.swing.*;
+
+import com.lemavos.chatapp.auth.db.ClientDB;
+import com.lemavos.chatapp.auth.models.Client;
+import com.lemavos.chatapp.auth.services.EmailSender;
+import com.lemavos.chatapp.auth.services.Utils;
+import com.lemavos.chatapp.auth.services.ValCodeGen;
+import com.lemavos.chatapp.constants.CommonConstants;
 public class Register {
     public static void register(){
         int axisX = CommonConstants.AXIS_X;

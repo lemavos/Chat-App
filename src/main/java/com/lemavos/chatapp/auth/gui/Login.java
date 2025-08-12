@@ -1,9 +1,10 @@
-package com.lemavos.ChatApp.Auth.gui;
-
-import com.lemavos.ChatApp.Auth.db.ClientDB;
-import com.lemavos.ChatApp.constants.CommonConstants;
+package com.lemavos.chatapp.auth.gui;
 
 import javax.swing.*;
+
+import com.lemavos.chatapp.auth.db.ClientDB;
+import com.lemavos.chatapp.auth.services.LocalDataManager;
+import com.lemavos.chatapp.constants.CommonConstants;
 
 public class Login {
     public static void login() {
@@ -25,17 +26,17 @@ public class Login {
         root.setLayout(null);
         root.setResizable(false);
 
-    // EMAIL
-        // Email Label
-        JLabel emailLabel = new JLabel("Email:");
-        emailLabel.setBounds((axisX - commonWidth) / 2, currentY, commonWidth, commonHeight);
-        root.add(emailLabel);
+    // Username
+        // Username Label
+        JLabel usernameLabel = new JLabel("Username:");
+        usernameLabel.setBounds((axisX - commonWidth) / 2, currentY, commonWidth, commonHeight);
+        root.add(usernameLabel);
         currentY += padY;
 
-        // Email Field
-        JTextField emailField = new JTextField();
-        emailField.setBounds((axisX - fieldWidth) / 2, currentY, fieldWidth, commonHeight);
-        root.add(emailField);
+        // Username Field
+        JTextField usernameField = new JTextField();
+        usernameField.setBounds((axisX - fieldWidth) / 2, currentY, fieldWidth, commonHeight);
+        root.add(usernameField);
         currentY += padY;
 
     // PASSWORD
@@ -80,15 +81,18 @@ public class Login {
 
     // Login Button Action
         loginButton.addActionListener(e -> {
-            String email = emailField.getText();
+            String name = usernameField.getText();
             String password = new String(passwordField.getPassword());
 
-            boolean logged = db.authenticateClient(email, password);
+            boolean logged = db.authenticateClient(name, password);
 
             if (logged) {
                 labelStatus.setText("Logged in successfully!");
+                LocalDataManager.saveUsername(name);
+
+                
             } else {
-                labelStatus.setText("[ ! ] Email or password incorrect.");
+                labelStatus.setText("[ ! ] Username or password incorrect.");
             }
         });
     } 

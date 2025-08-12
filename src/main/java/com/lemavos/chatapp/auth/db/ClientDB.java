@@ -1,8 +1,8 @@
-package com.lemavos.ChatApp.Auth.db;
+package com.lemavos.chatapp.auth.db;
 
 import java.sql.*;
 
-import com.lemavos.ChatApp.Auth.models.Client;
+import com.lemavos.chatapp.auth.models.Client;
 
 public class ClientDB {
 
@@ -18,14 +18,14 @@ public class ClientDB {
     }
 
     // function to authenticate a client
-    public boolean authenticateClient(String email, String password) {
-        String sql = "SELECT password FROM clients WHERE email = ?";
+    public boolean authenticateClient(String name, String password) {
+        String sql = "SELECT password FROM clients WHERE name = ?";
 
         try (
             Connection conn = connect();
             PreparedStatement pstmt = conn.prepareStatement(sql)
         ) {
-            pstmt.setString(1, email);
+            pstmt.setString(1, name);
             ResultSet rs = pstmt.executeQuery();
 
             if (rs.next()) {

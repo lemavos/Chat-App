@@ -1,2 +1,2 @@
-mvn compile exec:java -Dexec.mainClass=com.lemavos.Main
+mvn compile exec:java -Dexec.mainClass=com.lemavos.chatapp.ChatAppApplication
 pause

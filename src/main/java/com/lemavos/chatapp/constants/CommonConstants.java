@@ -1,4 +1,4 @@
-package com.lemavos.ChatApp.constants;
+package com.lemavos.chatapp.constants;
 
 public class CommonConstants {
     // Window dimensions
