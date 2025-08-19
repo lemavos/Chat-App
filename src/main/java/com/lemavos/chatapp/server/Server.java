@@ -1,28 +1,45 @@
 package com.lemavos.chatapp.server;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintStream;
-import java.net.ServerSocket;
-import java.net.Socket;
+import java.net.InetSocketAddress;
+import org.java_websocket.server.WebSocketServer;
+import org.java_websocket.WebSocket;
+import org.java_websocket.handshake.ClientHandshake;
 
-public class Server {
-    public static void main(String[] args) throws IOException {
-        ServerSocket serverSocket = new ServerSocket(4000);
-        Socket socket = serverSocket.accept();
-        System.out.println("Client conected!");
+public class Server extends WebSocketServer {
 
-        InputStreamReader inputReader = new InputStreamReader(socket.getInputStream());
+    public Server(InetSocketAddress address) {
+        super(address);
+    }
 
-        PrintStream saida = new PrintStream(socket.getOutputStream());
+    @Override
+    public void onOpen(WebSocket conn, ClientHandshake handshake) {
+        System.out.println("Nova conexão: " + conn.getRemoteSocketAddress());
+    }
 
+    @Override
+    public void onClose(WebSocket conn, int code, String reason, boolean remote) {
+        System.out.println("Conexão fechada: " + conn.getRemoteSocketAddress());
+    }
 
-        BufferedReader reader = new BufferedReader(inputReader);
-        String menssage;
-        while((menssage = reader.readLine()) != null){
-            saida.println("Server: " + menssage);
-        }
+    @Override
+    public void onMessage(WebSocket conn, String message) {
+        System.out.println("Mensagem recebida: " + message);
+        conn.send("Eco: " + message); // responde pro cliente
+    }
 
+    @Override
+    public void onError(WebSocket conn, Exception ex) {
+        ex.printStackTrace();
+    }
+
+    @Override
+    public void onStart() {
+        System.out.println("Server WebSocket iniciado!");
+    }
+
+    // main só pra rodar o Server
+    public static void main(String[] args) {
+        Server server = new Server(new InetSocketAddress("localhost", 8080));
+        server.start();
     }
 }

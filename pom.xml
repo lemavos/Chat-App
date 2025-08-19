@@ -48,6 +48,13 @@
             <version>2.0.1</version>
         </dependency>
 
+        <!-- Web Socket -->
+		<dependency>
+		    <groupId>org.java-websocket</groupId>
+    		<artifactId>Java-WebSocket</artifactId>
+    		<version>1.5.7</version>
+		</dependency>
+
         <!-- Dotenv para Java -->
         <dependency>
             <groupId>io.github.cdimascio</groupId>

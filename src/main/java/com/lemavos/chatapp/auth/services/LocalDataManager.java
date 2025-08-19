@@ -19,7 +19,7 @@ public class LocalDataManager {
         File parent = file.getParentFile();
 
         if (!parent.exists()) {
-            boolean created = parent.mkdirs();
+            parent.mkdirs();
         }
 
         try (Writer writer = new FileWriter(file)) {

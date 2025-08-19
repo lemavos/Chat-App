@@ -10,9 +10,12 @@ public class Mensseger {
         Socket socket = new Socket("localhost", 4000);
         Scanner scanner = new Scanner(System.in);
 
-        PrintStream saida = new PrintStream(socket.getOutputStream());
-        saida.println(scanner.nextLine());
+        while(true){
+            PrintStream saida = new PrintStream(socket.getOutputStream());
+            saida.println(scanner.nextLine());
 
-
+            //socket.close();
+            //scanner.close();
+        }
     }
 }
