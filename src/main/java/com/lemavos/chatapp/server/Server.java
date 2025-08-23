@@ -2,6 +2,9 @@ package com.lemavos.chatapp.server;
 
 import java.net.InetSocketAddress;
 import org.java_websocket.server.WebSocketServer;
+
+import com.lemavos.chatapp.constants.CommonConstants;
+
 import org.java_websocket.WebSocket;
 import org.java_websocket.handshake.ClientHandshake;
 
@@ -13,18 +16,18 @@ public class Server extends WebSocketServer {
 
     @Override
     public void onOpen(WebSocket conn, ClientHandshake handshake) {
-        System.out.println("Nova conexão: " + conn.getRemoteSocketAddress());
+        System.out.println("New Connection: " + conn.getRemoteSocketAddress());
     }
 
     @Override
     public void onClose(WebSocket conn, int code, String reason, boolean remote) {
-        System.out.println("Conexão fechada: " + conn.getRemoteSocketAddress());
+        System.out.println("Connection Closed: " + conn.getRemoteSocketAddress());
     }
 
     @Override
     public void onMessage(WebSocket conn, String message) {
-        System.out.println("Mensagem recebida: " + message);
-        conn.send("Eco: " + message); // responde pro cliente
+        System.out.println("Menssage Received: " + message);
+        conn.send("Eco: " + message);
     }
 
     @Override
@@ -34,12 +37,15 @@ public class Server extends WebSocketServer {
 
     @Override
     public void onStart() {
-        System.out.println("Server WebSocket iniciado!");
+        System.out.println("Server WebSocket Init!");
     }
 
-    // main só pra rodar o Server
     public static void main(String[] args) {
-        Server server = new Server(new InetSocketAddress("localhost", 8080));
+
+        String IP = CommonConstants.IP;
+        int PORT = CommonConstants.PORT;
+
+        Server server = new Server(new InetSocketAddress(IP, PORT));
         server.start();
     }
 }

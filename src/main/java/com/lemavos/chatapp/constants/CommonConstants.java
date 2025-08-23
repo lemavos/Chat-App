@@ -1,6 +1,10 @@
 package com.lemavos.chatapp.constants;
 
 public class CommonConstants {
+    // IP
+    public static final String IP = "localhost";
+    public static final int PORT = 8080;
+
     // Window dimensions
     public static final int AXIS_X = 480;
     public static final int AXIS_Y = 520;
