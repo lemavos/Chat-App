@@ -7,9 +7,11 @@ import com.lemavos.chatapp.constants.CommonConstants;
 
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.util.Scanner;
+import java.util.function.Consumer;
 
 public class SendMenssage extends WebSocketClient {
+
+    private Consumer<String> messageListener;
 
     public SendMenssage(String serverUri) throws URISyntaxException {
         super(new URI(serverUri));
@@ -22,7 +24,8 @@ public class SendMenssage extends WebSocketClient {
 
     @Override
     public void onMessage(String message) {
-        log("Server" + message);
+        log("Server: " + message);
+        if (messageListener != null) messageListener.accept(message);
     }
 
     @Override
@@ -40,29 +43,20 @@ public class SendMenssage extends WebSocketClient {
         ex.printStackTrace();
     }
 
+    public void setMessageListener(Consumer<String> listener) {
+        this.messageListener = listener;
+    }
+
     private static void log(String msg) {
         System.out.println(msg);
     }
 
-    public static void main(String[] args) throws Exception {
+    public static SendMenssage startClient() throws Exception {
         String IP = CommonConstants.IP;
         int PORT = CommonConstants.PORT;
 
         SendMenssage client = new SendMenssage("ws://" + IP + ":" + PORT);
         client.connectBlocking();
-
-        Scanner scanner = new Scanner(System.in);
-        while (true) {
-            String msg = scanner.nextLine().trim();
-            if (!msg.isEmpty()) {
-                if (client.isOpen()) {
-                    client.send(msg);
-                    log("You: " + msg);
-                } else {
-                    log("Not Connected!");
-                }
-            }
-        scanner.close();
-        }
+        return client;
     }
 }

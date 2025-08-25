@@ -6,6 +6,8 @@ import com.lemavos.chatapp.auth.db.ClientDB;
 import com.lemavos.chatapp.auth.services.LocalDataManager;
 import com.lemavos.chatapp.constants.CommonConstants;
 
+import com.lemavos.chatapp.inapp.Lobby;;
+
 public class Login {
     public static void login() {
         ClientDB db = new ClientDB();
@@ -89,6 +91,9 @@ public class Login {
             if (logged) {
                 labelStatus.setText("Logged in successfully!");
                 LocalDataManager.saveUsername(name);
+                root.dispose();
+                Lobby.lobby();
+
 
                 
             } else {
