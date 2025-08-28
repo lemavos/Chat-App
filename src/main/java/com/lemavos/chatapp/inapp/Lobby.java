@@ -8,7 +8,7 @@ import javax.swing.JTextField;
 
 import com.lemavos.chatapp.constants.CommonConstants;
 import com.lemavos.chatapp.inapp.chat.Chat;
-import com.lemavos.chatapp.inapp.chat.SendMenssage;
+import com.lemavos.chatapp.inapp.chat.SendMessage;
 
 public class Lobby {
     public static void lobby() {
@@ -38,7 +38,7 @@ public class Lobby {
     // Chat Button Action
         openChatButton.addActionListener(e -> {
             try {
-           SendMenssage client = SendMenssage.startClient();
+           SendMessage client = SendMessage.startClient();
             Chat chat = new Chat(client);
             chat.ChatUI();
             root.dispose();

@@ -9,11 +9,11 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.function.Consumer;
 
-public class SendMenssage extends WebSocketClient {
+public class SendMessage extends WebSocketClient {
 
     private Consumer<String> messageListener;
 
-    public SendMenssage(String serverUri) throws URISyntaxException {
+    public SendMessage(String serverUri) throws URISyntaxException {
         super(new URI(serverUri));
     }
 
@@ -51,11 +51,11 @@ public class SendMenssage extends WebSocketClient {
         System.out.println(msg);
     }
 
-    public static SendMenssage startClient() throws Exception {
+    public static SendMessage startClient() throws Exception {
         String IP = CommonConstants.IP;
         int PORT = CommonConstants.PORT;
 
-        SendMenssage client = new SendMenssage("ws://" + IP + ":" + PORT);
+        SendMessage client = new SendMessage("ws://" + IP + ":" + PORT);
         client.connectBlocking();
         return client;
     }

@@ -1,6 +1,5 @@
 package com.lemavos.chatapp.inapp.chat;
 
-import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JTextField;
 
@@ -8,9 +7,9 @@ import com.lemavos.chatapp.constants.CommonConstants;
 import javax.swing.*;
 
 public class Chat {
-    private final SendMenssage client;
+    private final SendMessage client;
 
-    public Chat(SendMenssage client) {
+    public Chat(SendMessage client) {
         this.client = client;
     }
 
