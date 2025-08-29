@@ -1,6 +1,6 @@
 // generate id's to clients
 
-package com.lemavos.chatapp.auth.services;
+package com.lemavos.chatapp.auth.authservices;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

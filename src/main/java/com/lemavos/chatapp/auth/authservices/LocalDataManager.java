@@ -1,4 +1,4 @@
-package com.lemavos.chatapp.auth.services;
+package com.lemavos.chatapp.auth.authservices;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

@@ -40,12 +40,18 @@ public class Server extends WebSocketServer {
         System.out.println("Server WebSocket Init!");
     }
 
-    public static void main(String[] args) {
+    public static boolean initServer() {
+        try {
+            String IP = CommonConstants.IP;
+            int PORT = CommonConstants.PORT;
 
-        String IP = CommonConstants.IP;
-        int PORT = CommonConstants.PORT;
-
-        Server server = new Server(new InetSocketAddress(IP, PORT));
-        server.start();
+            Server server = new Server(new InetSocketAddress(IP, PORT));
+            server.start();
+            System.out.println("Servidor iniciado em " + IP + ":" + PORT);
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 }

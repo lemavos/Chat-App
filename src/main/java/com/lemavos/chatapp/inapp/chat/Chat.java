@@ -16,9 +16,7 @@ public class Chat {
     public void ChatUI() {
         int axisX = CommonConstants.AXIS_X;
         int axisY = CommonConstants.AXIS_Y;
-        int fieldWidth = CommonConstants.FIELD_WIDTH;
         int commonHeight = CommonConstants.COMMON_HEIGHT;
-        int padY = CommonConstants.PADY;
         int currentY = CommonConstants.START_Y;
 
         JFrame root = new JFrame("Chat");

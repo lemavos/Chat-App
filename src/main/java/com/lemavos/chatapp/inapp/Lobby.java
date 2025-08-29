@@ -2,9 +2,6 @@ package com.lemavos.chatapp.inapp;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPasswordField;
-import javax.swing.JTextField;
 
 import com.lemavos.chatapp.constants.CommonConstants;
 import com.lemavos.chatapp.inapp.chat.Chat;
@@ -15,9 +12,7 @@ public class Lobby {
 
         int axisX = CommonConstants.AXIS_X;
         int axisY = CommonConstants.AXIS_Y;
-        int commonWidth = CommonConstants.COMMON_WIDTH;
         int commonHeight = CommonConstants.COMMON_HEIGHT;
-        int fieldWidth = CommonConstants.FIELD_WIDTH;
         int especialWidth = CommonConstants.ESPECIAL_WIDTH;
         int padY = CommonConstants.PADY;
         int currentY = CommonConstants.START_Y;

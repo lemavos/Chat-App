@@ -3,7 +3,7 @@ package com.lemavos.chatapp.auth.gui;
 import javax.swing.*;
 
 import com.lemavos.chatapp.auth.db.ClientDB;
-import com.lemavos.chatapp.auth.services.LocalDataManager;
+import com.lemavos.chatapp.auth.authservices.LocalDataManager;
 import com.lemavos.chatapp.constants.CommonConstants;
 
 import com.lemavos.chatapp.inapp.Lobby;;

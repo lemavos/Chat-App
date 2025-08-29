@@ -4,9 +4,9 @@ import javax.swing.*;
 
 import com.lemavos.chatapp.auth.db.ClientDB;
 import com.lemavos.chatapp.auth.models.Client;
-import com.lemavos.chatapp.auth.services.EmailSender;
-import com.lemavos.chatapp.auth.services.Utils;
-import com.lemavos.chatapp.auth.services.ValCodeGen;
+import com.lemavos.chatapp.auth.authservices.EmailSender;
+import com.lemavos.chatapp.auth.authservices.Utils;
+import com.lemavos.chatapp.auth.authservices.ValCodeGen;
 import com.lemavos.chatapp.constants.CommonConstants;
 public class Register {
     public static void register(){
