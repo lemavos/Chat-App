@@ -29,7 +29,7 @@ public class ChatAppApplication {
         root.add(labelStatus);
         currentY += padY;
 
-        boolean serverStarted = Server.initServer();
+        boolean serverStarted = Server.connectServer();
 
         if (!serverStarted) {
             // Update Status
@@ -39,7 +39,7 @@ public class ChatAppApplication {
             JButton retryButton = new JButton("Retry Connect");
             retryButton.setBounds((axisX - especialWidth) / 2, currentY, especialWidth, commonHeight);
             retryButton.addActionListener(e -> {
-                if (Server.initServer()) {
+                if (Server.connectServer()) {
                     labelStatus.setText("Server Connected!");
                     retryButton.setEnabled(false);
                     Login.login();

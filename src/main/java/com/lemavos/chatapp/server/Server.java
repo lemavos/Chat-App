@@ -40,7 +40,7 @@ public class Server extends WebSocketServer {
         System.out.println("Server WebSocket Init!");
     }
 
-    public static boolean initServer() {
+    public static boolean connectServer() {
         try {
             String IP = CommonConstants.IP;
             int PORT = CommonConstants.PORT;
