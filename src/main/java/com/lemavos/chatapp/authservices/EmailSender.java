@@ -1,6 +1,6 @@
 // file responsive to sent email to confirm email address.
 
-package com.lemavos.chatapp.auth.authservices;
+package com.lemavos.chatapp.authservices;
 
 import io.github.cdimascio.dotenv.Dotenv;
 import jakarta.mail.*;

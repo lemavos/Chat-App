@@ -4,8 +4,8 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-import com.lemavos.chatapp.auth.gui.Login;
 import com.lemavos.chatapp.constants.CommonConstants;
+import com.lemavos.chatapp.inapp.gui.Login;
 import com.lemavos.chatapp.server.Server;
 
 public class ChatAppApplication {

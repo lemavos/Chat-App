@@ -1,6 +1,6 @@
-package com.lemavos.chatapp.auth.entity;
+package com.lemavos.chatapp.entity;
 
-import com.lemavos.chatapp.auth.authservices.IdGen;
+import com.lemavos.chatapp.authservices.IdGen;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -25,7 +25,7 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private String id;
+    private long id;
     @Column(name = "name")
     private String name;
 
