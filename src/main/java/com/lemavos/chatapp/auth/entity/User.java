@@ -1,20 +1,44 @@
-package com.lemavos.chatapp.auth.models;
+package com.lemavos.chatapp.auth.entity;
 
 import com.lemavos.chatapp.auth.authservices.IdGen;
 
-public class Client {
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+@Table(name = "Users")
+@Entity
+public class User {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private String id;
-    private boolean status;
+    @Column(name = "name")
     private String name;
-    private String email;
-    private String phone;
-    private String password;
-    private transient String validateCode;
 
-    public Client(String name, String email, String phone, String password) {
-        createClient(name, email, phone, password);
-    }
+    @Column(name = "email")
+    private String email;
+
+    @Column(name = "phone")
+    private String phone;
+
+    @Column(name = "password")
+    private String password;
+    
+    private transient String validateCode;
 
     public void info() {
         System.out.println("\nClient Information:");
@@ -51,40 +75,5 @@ public class Client {
             System.out.println("+=====================================+");
             return false;
         }
-    }
-
-    // criar uma ui pra isso
-    // Getters
-    public String getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public boolean getStatus() {
-        return status;
-    }
-
-    // Setters
-    public String getValidateCode() {
-        return validateCode;
-    }
-
-    public void setValidateCode(String validateCode) {
-        this.validateCode = validateCode;
     }
 }

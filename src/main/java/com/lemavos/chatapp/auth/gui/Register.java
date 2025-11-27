@@ -3,7 +3,7 @@ package com.lemavos.chatapp.auth.gui;
 import javax.swing.*;
 
 import com.lemavos.chatapp.auth.db.ClientDB;
-import com.lemavos.chatapp.auth.models.Client;
+import com.lemavos.chatapp.auth.entity.Client;
 import com.lemavos.chatapp.auth.authservices.EmailSender;
 import com.lemavos.chatapp.auth.authservices.Utils;
 import com.lemavos.chatapp.auth.authservices.ValCodeGen;
