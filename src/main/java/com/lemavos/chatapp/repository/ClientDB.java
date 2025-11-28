@@ -1,4 +1,4 @@
-package com.lemavos.chatapp.db;
+package com.lemavos.chatapp.repository;
 
 import java.sql.*;
 

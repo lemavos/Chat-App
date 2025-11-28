@@ -1,4 +1,4 @@
-package com.lemavos.chatapp.server;
+package com.lemavos.server;
 
 import java.net.InetSocketAddress;
 import org.java_websocket.server.WebSocketServer;

@@ -1,4 +1,4 @@
-package com.lemavos.chatapp.inapp.chat;
+package frontend.chat;
 
 import org.java_websocket.client.WebSocketClient;
 import org.java_websocket.handshake.ServerHandshake;

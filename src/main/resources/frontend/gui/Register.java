@@ -1,4 +1,4 @@
-package com.lemavos.chatapp.inapp.gui;
+package frontend.gui;
 
 import javax.swing.*;
 

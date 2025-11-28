@@ -1,11 +1,12 @@
-package com.lemavos.chatapp.inapp.gui;
+package frontend.gui;
 
 import javax.swing.*;
 
 import com.lemavos.chatapp.authservices.LocalDataManager;
 import com.lemavos.chatapp.constants.CommonConstants;
-import com.lemavos.chatapp.db.ClientDB;
-import com.lemavos.chatapp.inapp.Lobby;;
+import com.lemavos.chatapp.repository.ClientDB;
+
+import frontend.Lobby;;
 
 public class Login {
     public static void login() {

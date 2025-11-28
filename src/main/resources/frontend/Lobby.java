@@ -1,11 +1,12 @@
-package com.lemavos.chatapp.inapp;
+package frontend;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
 import com.lemavos.chatapp.constants.CommonConstants;
-import com.lemavos.chatapp.inapp.chat.Chat;
-import com.lemavos.chatapp.inapp.chat.SendMessage;
+
+import frontend.chat.Chat;
+import frontend.chat.SendMessage;
 
 public class Lobby {
     public static void lobby() {

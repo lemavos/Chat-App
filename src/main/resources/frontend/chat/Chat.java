@@ -1,4 +1,4 @@
-package com.lemavos.chatapp.inapp.chat;
+package frontend.chat;
 
 import javax.swing.JFrame;
 import javax.swing.JTextField;

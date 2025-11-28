@@ -1,7 +1,5 @@
 package com.lemavos.chatapp.entity;
 
-import com.lemavos.chatapp.authservices.IdGen;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
