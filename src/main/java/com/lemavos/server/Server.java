@@ -3,7 +3,7 @@ package com.lemavos.server;
 import java.net.InetSocketAddress;
 import org.java_websocket.server.WebSocketServer;
 
-import com.lemavos.chatapp.constants.CommonConstants;
+import frontend.constants.CommonConstants;
 
 import org.java_websocket.WebSocket;
 import org.java_websocket.handshake.ClientHandshake;

@@ -1,4 +1,4 @@
-package com.lemavos.chatapp.constants;
+package frontend.constants;
 
 public class CommonConstants {
     // IP
