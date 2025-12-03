@@ -45,11 +45,18 @@
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
 
-        <!-- PostgreSQL Driver -->
+        <!-- H2 Database -->    
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!-- PostgreSQL Driver -->    
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
-            <version>42.7.3</version>
+            <scope>runtime</scope>
         </dependency>
 
         <!-- Jakarta Mail (como você pediu) -->
@@ -70,7 +77,7 @@
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
-            <version>2.11.0</version>
+            <scope>runtime</scope>
         </dependency>
 
         <!-- BCrypt hashing -->
